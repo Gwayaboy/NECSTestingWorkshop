@@ -18,6 +18,9 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd
             var options = new ChromeOptions();
             options.AddArgument("test-type");
 
+            var directory = Environment.GetEnvironmentVariable("ChromeWebDriver");
+            //var directory = new ChromeDriver(Directory.GetCurrentDirectory(), options); 
+
             _browser = new ChromeDriver(Directory.GetCurrentDirectory(), options);
             _browser.Manage().Window.Maximize();
         }
@@ -43,8 +46,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd
             _browser.FindElement(By.CssSelector("#logoutForm > section.esh-identity-drop > a:nth-child(1)")).Click();
 
             //this test will fail sometimes because the list of orders is not yet available.
-            var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(60));
-            wait.Until(d => d.FindElement(By.CssSelector(".esh-orders-link"))).Click();
+            _browser.FindElement(By.CssSelector(".esh-orders-link")).Click();
 
             Assert.Equal(".NET Black & White Mug", _browser.FindElement(By.CssSelector(".esh-orders-detail-item--middle")).Text);
         }
