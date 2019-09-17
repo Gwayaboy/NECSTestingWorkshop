@@ -1,17 +1,18 @@
-﻿using eShopWebFunctionalTests.Configuration;
-using eShopWebFunctionalTests.Step_1.Pages;
-using eShopWebFunctionalTests.Step_2.Assertions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
+﻿using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Configuration;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.ViewModels;
+using Xunit;
 
-namespace eShopWebFunctionalTests.Step_2
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2
 {
-    [TestClass]
-    public class AddingToBasketAndCheckingOutTests : FunctionalUITest
+    [Trait("Category", "EndToEnd")]
+
+    public class AddingToBasketAndCheckingOutTests : Specs
     {
         public AddingToBasketAndCheckingOutTests() : base(BrowserHost.Chrome) { }
 
-        [TestMethod]
+        [Fact]
         public void Can_add_selected_item_basket()
         {
             //Arrange

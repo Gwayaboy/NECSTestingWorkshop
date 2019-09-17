@@ -1,9 +1,10 @@
 ﻿using FluentAssertions;
 using FluentAssertions.Execution;
 using FluentAssertions.Primitives;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages;
 using System;
 
-namespace eShopWebFunctionalTests.Step_2.Assertions
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions
 {
     public abstract class PageAssertions<TPage, TParentAssertion> : ReferenceTypeAssertions<TPage, PageAssertions<TPage, TParentAssertion>>
        where TPage : Page, new()

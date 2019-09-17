@@ -1,8 +1,6 @@
-﻿
+﻿using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages;
 
-using eShopWebFunctionalTests.Step_1.Pages;
-
-namespace eShopWebFunctionalTests.Step_2.Assertions
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions
 {
     public static class ShouldExtensions
     {

@@ -16,9 +16,32 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="EndToEnd\BrittleTests.cs" />
+    <Compile Include="EndToEnd\Configuration\BrowserHost.cs" />
+    <Compile Include="EndToEnd\Configuration\Specs.cs" />
+    <Compile Include="EndToEnd\Pages\BasketPage.cs" />
+    <Compile Include="EndToEnd\Pages\HomePage.cs" />
+    <Compile Include="EndToEnd\Pages\Page.cs" />
+    <Compile Include="EndToEnd\Step 1\AddingToBasketAndCheckingOutTests.cs" />
+    <Compile Include="EndToEnd\Step 2\Assertions\BasketPageAssertions.cs" />
+    <Compile Include="EndToEnd\Step 2\Assertions\PageAssertions.cs" />
+    <Compile Include="EndToEnd\Step 2\Assertions\ShouldAssertions.cs" />
+    <Compile Include="EndToEnd\Step 2\FluentAddingToBasketAndCheckingOutTests.cs" />
+    <Compile Include="EndToEnd\ViewModels\ProductViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="EndToEnd\Step 1\IntroducingPageObjects.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="77.0.3865.4000" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
@@ -35,10 +58,6 @@
 
   <ItemGroup>
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="EndToEnd\" />
   </ItemGroup>
 
 </Project>

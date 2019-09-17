@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopWebFunctionalTests.Step_1.Pages
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages
 {
     public class HomePage : Page
     {

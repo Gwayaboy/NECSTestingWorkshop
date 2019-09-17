@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using eShopWebFunctionalTests.Step_1.Pages;
 using FluentAssertions;
 using FluentAssertions.Execution;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages;
+using Microsoft.eShopWeb.FunctionalTests.EndToEnd.ViewModels;
 using Newtonsoft.Json;
 
-namespace eShopWebFunctionalTests.Step_2.Assertions
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions
 {
 
     public class BasketPageAssertions : PageAssertions<BasketPage, BasketPageAssertions>

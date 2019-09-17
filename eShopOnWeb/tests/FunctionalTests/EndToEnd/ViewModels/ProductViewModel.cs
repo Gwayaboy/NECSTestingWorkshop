@@ -1,4 +1,4 @@
-﻿namespace eShopWebFunctionalTests.Step_1.Pages
+﻿namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.ViewModels
 {
     public class ProductViewModel
     {
