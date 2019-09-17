@@ -28,8 +28,8 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2
                 .Be<BasketPage>(withExpectedTitle: "Basket - Microsoft.eShopOnWeb")
                                .And
                                .HaveUrlEndingWith("/Basket")
-                            /*   .And
-                               .OnlyHave(expectedDotNetBlackAndWhiteMug)*/;
+                               .And
+                               .OnlyHave(expectedDotNetBlackAndWhiteMug);
         }
 
     }
