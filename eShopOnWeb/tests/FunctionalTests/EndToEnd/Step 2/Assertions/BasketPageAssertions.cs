@@ -31,6 +31,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions
         private bool AreEqual(BasketItemViewModel actualItem, BasketItemViewModel expectedItem)
         {
             return
+                 actualItem.Id == expectedItem.Id &&
                 string.Equals(actualItem.ProductName, expectedItem.ProductName, StringComparison.InvariantCultureIgnoreCase);
         }
 

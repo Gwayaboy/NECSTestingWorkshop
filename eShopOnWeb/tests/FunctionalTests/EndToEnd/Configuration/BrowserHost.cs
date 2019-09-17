@@ -34,7 +34,10 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Configuration
             var options = new ChromeOptions();
             options.AddArgument("test-type");
 
-            return new BrowserHost(new ChromeDriver(Directory.GetCurrentDirectory(), options));
+            var directory = Environment.GetEnvironmentVariable("ChromeWebDriver");
+            //var directory = new ChromeDriver(Directory.GetCurrentDirectory(), options); 
+
+            return new BrowserHost(new ChromeDriver(directory, options));
         }
 
         #region IDisposable Support
