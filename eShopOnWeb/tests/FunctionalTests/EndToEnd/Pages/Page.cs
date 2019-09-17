@@ -32,5 +32,14 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages
 
             return new TPage { WebDriver = webDriver };
         }
+
+        protected TReturn ExecuteScriptAndReturn<TReturn>(string scriptToExecute)
+        {
+            var javascriptExecutor = (IJavaScriptExecutor)WebDriver;
+
+            var untypedValue = javascriptExecutor.ExecuteScript($"return {scriptToExecute}");
+
+            return (TReturn)Convert.ChangeType(untypedValue, typeof(TReturn));
+        }
     }
 }
