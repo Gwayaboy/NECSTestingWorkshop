@@ -5,7 +5,7 @@ using System;
 using System.IO;
 using Xunit;
 
-namespace eShopWebFunctionalTests
+namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd
 {
     [Trait("Category", "EndToEnd")]
 
@@ -26,7 +26,7 @@ namespace eShopWebFunctionalTests
         [Fact]
         public void LoggedIn_User_Can_buy_a_cup_of_T()
         {
-            _browser.Navigate().GoToUrl("http://localhost:5106");
+            _browser.Navigate().GoToUrl("https://eshopwebapp9090.azurewebsites.net/");
             var type = new SelectElement(_browser.FindElement(By.Id("CatalogModel_TypesFilterApplied")));
             type.SelectByText("Mug");
             _browser.FindElement(By.CssSelector("body > div > section.esh-catalog-filters > div > form > input")).Click();
@@ -43,7 +43,8 @@ namespace eShopWebFunctionalTests
             _browser.FindElement(By.CssSelector("#logoutForm > section.esh-identity-drop > a:nth-child(1)")).Click();
 
             //this test will fail sometimes because the list of orders is not yet available.
-            _browser.FindElement(By.CssSelector(".esh-orders-link")).Click();
+            var wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(60));
+            wait.Until(d => d.FindElement(By.CssSelector(".esh-orders-link"))).Click();
 
             Assert.Equal(".NET Black & White Mug", _browser.FindElement(By.CssSelector(".esh-orders-detail-item--middle")).Text);
         }

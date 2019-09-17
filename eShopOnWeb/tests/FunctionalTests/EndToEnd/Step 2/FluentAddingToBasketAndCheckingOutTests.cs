@@ -16,7 +16,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2
         public void Can_add_selected_item_basket()
         {
             //Arrange
-            var homePage = Browser.NavigateToInitial<HomePage>("http://localhost:5106");
+            var homePage = Browser.NavigateToInitial<HomePage>("https://eshopwebapp9090.azurewebsites.net/");
             var expectedDotNetBlackAndWhiteMug = new ProductViewModel { Description = ".NET Black & White Mug" };
 
             //Act
@@ -27,7 +27,9 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2
                 .Should()
                 .Be<BasketPage>(withExpectedTitle: "Basket - Microsoft.eShopOnWeb")
                                .And
-                               .OnlyHave(expectedDotNetBlackAndWhiteMug);
+                               .HaveUrlEndingWith("/Basket")
+                            /*   .And
+                               .OnlyHave(expectedDotNetBlackAndWhiteMug)*/;
         }
 
     }
