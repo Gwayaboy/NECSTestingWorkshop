@@ -21,7 +21,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd
             var directory = Environment.GetEnvironmentVariable("ChromeWebDriver");
             //var directory = new ChromeDriver(Directory.GetCurrentDirectory(), options); 
 
-            _browser = new ChromeDriver(Directory.GetCurrentDirectory(), options);
+            _browser = new ChromeDriver(directory, options);
             _browser.Manage().Window.Maximize();
         }
 
