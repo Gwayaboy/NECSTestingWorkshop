@@ -8,7 +8,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_1
     public class AddingToBasketAndCheckingOutTests : Specs
     {
         public AddingToBasketAndCheckingOutTests() : base(BrowserHost.Chrome) { }
-
+        // a comment
         [Fact]
         public void Can_add_selected_item_basket()
         {

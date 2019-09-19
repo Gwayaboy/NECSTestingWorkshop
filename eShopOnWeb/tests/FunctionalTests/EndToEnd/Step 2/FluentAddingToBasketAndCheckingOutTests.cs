@@ -1,7 +1,6 @@
 ﻿using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Configuration;
 using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Pages;
 using Microsoft.eShopWeb.FunctionalTests.EndToEnd.Step_2.Assertions;
-using Microsoft.eShopWeb.FunctionalTests.EndToEnd.ViewModels;
 using Microsoft.eShopWeb.Web.Pages.Basket;
 using Xunit;
 
